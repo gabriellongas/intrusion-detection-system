@@ -36,7 +36,7 @@ def unblock_ips():
 
 # Função principal de captura de pacotes
 def packet_sniffer():
-    sniffer = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_IP)
+    sniffer = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_TCP)
     sniffer.bind(("0.0.0.0", 0))
     sniffer.setsockopt(socket.IPPROTO_IP, socket.IP_HDRINCL, 1)
 
